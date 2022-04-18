@@ -40,13 +40,14 @@ header nav a:hover {
     color: #fff;
 }
 
-/*filme principal*/
 
-.filme-principal {
+/*anime principal*/
+
+.anime-principal {
     font-size: 16px;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/capa-house.jpg');
-    
-    height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/capa/capa.jpg');
+
+    height: 450px;
     background-size: cover;
 
     display: flex;
@@ -55,19 +56,19 @@ header nav a:hover {
     align-items: flex-start;
 }
 
-.filme-principal .descricao {
+.anime-principal .descricao {
     margin-top: 10px;
     margin-bottom: 40px;
 }
 
-.filme-principal .titulo {
+.anime-principal .titulo {
     margin-top: 15%;
     font-size: 40px;
     font-family: 'Trebuchet MS', Arial, sans-serif;
 }
 
 .botao {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     border: none;
     color: white;
 
@@ -92,16 +93,70 @@ header nav a:hover {
     margin-left: 20px;
 }
 
-.filme-principal .container {
+.anime-principal .container {
     width: 70%;
 }
 
-.box-filme {
-    height: 60%;
-    width: 60%;
+.box-anime {
+    height: 100%;
+    width: 100%;
     display: block;
 }
 
-.carrosel-filmes {
+.carrosel-animes {
     margin-top: 5px;
+}
+
+.carrosel-animes .box-texto {
+    text-align: center;
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.carrosel-animes .item img {
+    transition: .3s ease all;
+}
+
+.carrosel-animes .item:hover img {
+    filter: brightness(50%);
+}
+
+.carrosel-animes .item:hover .box-texto {
+    visibility: visible;
+}
+
+/*modal*/
+.modal {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background-color: rgba(20, 20, 20, 0.900);
+    transition: all .4s;
+}
+
+.modal .video {
+    margin-top: 5%;
+    width: 560px;
+    height: 315px;
+}
+
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-exit {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    z-index: 10000;
 }
